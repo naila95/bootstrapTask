@@ -14,6 +14,19 @@ a {
   transition: all 0.5s;
   color: #fff;
   padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top-header .contact {
+  display: flex;
+  align-items: center;
+}
+
+.top-header .social-media {
+  display: flex;
+  align-items: center;
 }
 
 .top-header a {
@@ -38,14 +51,20 @@ header {
   color: #f96f59;
 }
 
-.navbar ul {
+.navbar-custom ul {
   list-style: none;
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-.navbar a {
+.navbar-custom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-custom a {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -378,7 +397,7 @@ header {
 }
 
 #testimonials {
-  height: 40rem;
+  padding: 60px 0 100px 0;
 }
 
 .person {
@@ -622,9 +641,8 @@ header {
 }
 
 #blog-post {
-  padding: 70px 0;
+  padding: 70px 0 120px 0;
   background-color: rgb(246, 246, 246);
-  height: 55rem;
 }
 
 .blog-item {
@@ -658,4 +676,69 @@ header {
   font-weight: 600;
   margin-bottom: 5px !important;
   color: #3c3c3c !important;
+}
+
+footer {
+  font-size: 16px;
+  background-color: #008374;
+  padding: 50px 0;
+  color: white;
+}
+
+footer .footer-social a {
+  color: #a2a2a2;
+  transition: 0.3s;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #bbbbbb;
+  margin-right: 10px;
+}
+
+footer .footer-social a:hover {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .top-header .contact {
+    display: none;
+  }
+
+  .social-media {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .bottom-header .navbar-custom {
+    display: none;
+  }
+
+  .bottom-header .logo {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 576px) {
+  .top-header .contact {
+    display: none;
+  }
+
+  .social-media {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .bottom-header .navbar-custom {
+    display: none;
+  }
+
+  .bottom-header .logo {
+    display: flex;
+    justify-content: flex-start;
+  }
 }
